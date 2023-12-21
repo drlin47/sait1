@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    background: hwb(158 67% 30%);
+    font-family: 'Cormorant Infant', serif;
+
+    font-size: 15px;
+    color: rgb(46, 22, 22);
+}
+*,
+*::before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a[class], button[class], input[class], textarea[class] {
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background: url('../images/flower.jpg') center
+    no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*header*/
+.header {
+    padding: 30px 60px;
+    width: 100%;
+    background-color: rgba(246, 146, 219, 0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*header__logo*/
+.header__logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/*nav__link*/
+.nav__link {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: color 0.1s linear;
+}
+
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+
+    background-color: #503440;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+    color: #633f4e;
+}
+
+.nav__link:hover:after {
+    display: block;
+}
+
+/* TODO: Content */
+.content__container 
+{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    gap: 50px;
+}
+
+.title__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__text 
+{
+    font-size: 64px;
+}
+
+.card__container 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 130px;
+}
+
+.card__wrapper 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 5px solid #76b09f;
+    padding: 10px 15px;
+
+    max-width: 280px;
+    background-color: #76b09fc2;
+}
+
+.big_card_wrapper { max-width: 380px; }
+
+.card__img 
+{
+    width: 250px;
+    height: 250px;
+}
+.big_card_wrapper > .card__img {
+    width: 350px;
+    height: 350px;
+}
+
+.card__text {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* TODO: SLIDER */
+.slider__wrapper {
+    min-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slider__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 650px;
+}
+
+.slider__pagination {
+    position: absolute;
+    bottom: 15px;
+}
+
+.slider__items {
+    width: 100%;
+    height: 450px;
+    
+}
+.slider__items > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+    border-radius: 15px;
+    border: 3px solid rgba(246, 146, 219, 0.5);
+}
+
+.slider__controll__button {
+    border: none;
+    background-color: inherit;
+
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(246, 146, 219, 0.2);
+    opacity: .4;
+
+    transition: all .2s ease-in-out;
+}
+
+.slider__controll__button:hover {
+    background-color: rgba(246, 146, 219, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+button#slider_preview {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+button#slider_next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.slider__controll__button__icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* TODO: FOOTER */
+.footer__inner 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    padding: 15px 60px;
+    gap: 180px;
+
+    background-color: #9e688b;
+    min-height: 120px;
+}
+
+.footer__contacts 
+{
+    color: white;
+    font-size: 18px;
+}
+
+.footer__contacts__list 
+{
+    list-style-type: none;
+    width: 250px;
+}
+
+.footer__contacts__list__item__title 
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer__contacts_link { color: white; }
+
+.footer__contacts_link:hover 
+{
+    color: #eae5e5;
+    text-decoration: underline;
+}
+
+.footer__contacts_link_icons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+
+    font-size: 18px;
+}
+
+.footer__contacts__list__item__icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* TODO: MODAL */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color:rgba(246, 146, 219, 1);
+    border: 2px solid rgba(246, 146, 219, 0.5);
+
+    border-radius: 8px;
+}
+
+.modal__container { padding: 30px 60px; }
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.modal__form__item {
+    display: flex;
+    flex-direction: column;
+}
+.modal__form__item__text {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal__form__item__input 
+{
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.modal__form__item__textarea {
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.modal__form__item__button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
